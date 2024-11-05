@@ -1,0 +1,566 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #050505;
+  color: #ffffff;
+  background-image: url('../images/Background/RedBackground.jpeg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-block-start: 60px; /* Increased padding to account for navbar height */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05); /* Light translucent white for glossy look */
+  backdrop-filter: blur(20px) brightness(1.15); /* Increase blur and brightness for more gloss */
+  -webkit-backdrop-filter: blur(15px) brightness(1.2); /* Add compatibility for Safari */
+  color: white;
+  padding: 5px 5px;
+  position: fixed;
+  inline-size: 100%;
+  inset-block-start: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a soft shadow for depth */
+  border-block-end: 1px solid rgba(0, 0, 0, 0.2); /* Adds a subtle border to enhance the glassy effect */
+}
+
+header .logo {
+  block-size: 50px; /* Set the height for the logo */
+}
+
+nav {
+  block-size: 50px; /* Keep the height of the navbar */
+  display: flex; /* Make the nav a flex container */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Center items vertically */
+  inline-size: 100%; /* Ensure it spans the full width */
+}
+
+nav ul {
+  display: flex; /* Ensures the list items are in a row */
+  list-style: none; /* Removes bullet points */
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 50px; /* Centers nav items vertically */
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none; /* Remove underline */
+}
+
+
+
+.checkbtn {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  display: none; /* Hidden by default; shown in mobile view */
+}
+
+#check {
+  display: none; /* Hidden checkbox for toggling */
+}
+
+/* Responsive Styles */
+@media (max-width: 1050px) {
+  label.logo {
+      padding-inline-start: 10px; /* Adjust padding for smaller screens */
+  }
+
+  nav ul li a {
+      font-size: 16px; /* Smaller font size on medium screens */
+  }
+}
+
+/* Responsive media query code for small screens */
+@media (max-width: 890px) {
+  .checkbtn {
+      display: block; /* Show hamburger icon */
+  }
+
+  nav ul {
+      position: fixed; /* Make the menu fixed on the screen */
+      inline-size: 100%;
+      block-size: 100vh;
+      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for glassy effect */
+      backdrop-filter: blur(10px); /* Adds the glassy blur effect */
+      inset-block-start: 50px; /* Position below the navbar */
+      inset-inline-start: -100%; /* Hide offscreen initially */
+      text-align: center;
+      transition: all 0.5s; /* Smooth transition */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a soft shadow for depth */
+  }
+
+  nav ul li {
+      display: block; /* Stack nav items vertically */
+      margin: 20px 0; /* Spacing between items */
+      line-height: 30px; /* Adjust line height */
+  }
+
+  nav ul li a {
+      font-size: 20px; /* Increase font size on mobile */
+      color: white; /* Ensure text is visible */
+  }
+
+  a:hover,
+  a.active {
+      background: none; /* No additional background on hover or active state */
+      color: white; /* Keep text color consistent */
+  }
+
+  #check:checked ~ ul {
+      inset-inline-start: 0; /* Slide in menu when checkbox is checked */
+  }
+}
+
+/* Container Styling */
+.container {
+  max-inline-size: 1180px;
+  margin: auto;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column; /* Stack elements on mobile */
+  align-items: center; /* Center items on mobile */
+  padding: 20px;
+  flex: 1; /* Takes remaining height so footer is pushed to the bottom */
+}
+
+.text {
+  flex: 1;
+  margin: 20px 0; /* Adjusted margin for better spacing on mobile */
+  text-align: center; /* Center text for mobile */
+}
+
+.text h1 {
+  font-size: 2.5rem; /* Slightly smaller for better mobile fit */
+  margin-block-end: 20px;
+}
+
+.text p {
+  font-size: 1.1rem; /* Font size */
+  margin-block-end: 30px; /* Space below the paragraph */
+  line-height: 1.5; /* Improved readability */
+  max-inline-size: 800px; /* Limiting max width for better readability */
+  text-align: justify; /* Justify text for alignment */
+  padding: 0 15px; /* Adding some padding on the sides for better spacing */
+}
+
+/* Button Styling */
+.button {
+  padding: 10px 20px; /* Padding for button */
+  background-color: #ff69b4; /* Button color */
+  color: #fff; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Pointer on hover */
+  transition: all 0.3s ease; /* Transition effect */
+  display: block; /* Makes the button a block element */
+  margin: 20px auto; /* Centers the button and adds margin */
+}
+
+.button:hover {
+  background-color: #ff3380; /* Hover color */
+}
+
+/* Image Container Styling */
+.image-container {
+  flex: 1; /* Change flex to 1 to take less space */
+  display: flex;
+  justify-content: center; /* Center images */
+  max-inline-size: 90%; /* Decrease max width to 80% of the container */
+  block-size: 700px; /* Set a fixed height, adjust as needed */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Slider Styles */
+.box {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  margin: 20px 0; /* Add spacing above and below the slider */
+  inline-size: 100%; /* Full width */
+  justify-content: center; /* Center the images */
+  overflow-x: auto; /* Allows horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  
+  
+}
+
+.box .item {
+  border-radius: 5px;
+  position: relative;
+  inline-size: 150px; /* Width for slider items on desktop */
+  block-size: 150px; /* Set height equal to width for square frames */
+  background: #fff;
+  transition: 0.5s;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  margin: 0 10px; /* Add margin for spacing between images */
+}
+
+.box .item img {
+  inline-size: 100%; /* Make image fill the item */
+  block-size: 100%; /* Make image fill the item */
+  object-fit: cover; /* Cover the item without distortion */
+  filter: drop-shadow(0 5px 10px #000);
+  transition: 0.5s;
+}
+
+.box .item:hover img {
+  transform: translateY(-10px) scale(1.1);
+}
+
+/* Button Styles for Slider */
+.buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons below the slider */
+  gap: 10px;
+  margin: 10px 0; /* Add spacing above and below the buttons */
+}
+
+.buttons span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 50px;
+  block-size: 50px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+  position: relative; /* Enable positioning for arrow styles */
+}
+
+.buttons span:hover {
+  background: #222;
+}
+
+.buttons span:first-child:before {
+  content: "";
+  position: absolute;
+  inline-size: 10px;
+  block-size: 10px;
+  border-block-start: 1px solid #fff;
+  border-inline-start: 1px solid #fff;
+  transform: rotate(-45deg); /* Corrected rotate property */
+}
+
+.buttons span:last-child:after {
+  content: "";
+  position: absolute;
+  inline-size: 10px;
+  block-size: 10px;
+  border-block-start: 1px solid #fff;
+  border-inline-end: 1px solid #fff;
+  transform: rotate(45deg); /* Corrected rotate property */
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Align text and image side by side on larger screens */
+  }
+
+  .text {
+    margin-inline-end: 30px; /* Adds space between text and image */
+    text-align: start; 
+  }
+
+  .text h1 {
+    font-size: 3rem; /* Increase font size on larger screens */
+    color :rgb(6, 174, 241);
+  }
+
+  .text p {
+    font-size: 1.5rem; /* Increase font size on larger screens */
+  }
+
+  /* Adjust slider styles for larger screens */
+  .box .item {
+    inline-size: 150px; /* Increased width for desktop */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container img {
+    max-inline-size: 90vw; /* Prevent images from exceeding viewport */
+    block-size: 300px; /* Maintain aspect ratio */
+  }
+}
+
+footer {
+  background-color: #111;
+}
+
+.footerContainer {
+  inline-size: 100%;
+  padding: 70px 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+.footerLogo img {
+  block-size: 80px; /* Increase height to make the logo larger */
+  inline-size: auto; /* Ensures the width scales proportionally */
+}
+
+
+/* Align social icons and navigation to the right */
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+
+.socialIcons a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.footerBottom {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: white;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 700px) {
+  .footerContainer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footerContent {
+      align-items: center;
+  }
+  
+  .footerNav ul {
+      flex-direction: column;
+  }
+
+  .footerNav ul li {
+      inline-size: 100%;
+      text-align: center;
+      margin: 10px;
+  }
+
+  .socialIcons a {
+      padding: 8px;
+      margin: 4px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  header {
+    padding: 10px 15px; /* Smaller padding for header */
+  }
+  .logo {
+    font-size: 18px; /* Adjust logo size */
+  }
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center;
+  }
+  nav ul li {
+    margin-inline-start: 0; /* Reset margin for stacked items */
+    margin-block-end: 10px;
+  }
+  .contact-container {
+    margin-block-start: 20px; /* Adjust margin for contact container */
+  }
+  .left-section h2, .right-section input, .right-section textarea, .right-section button {
+    font-size: 14px; /* Uniform smaller font size on mobile */
+    font-size: 50px;
+  }
+}
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .contact-container {
+    flex-direction: row; /* Row layout on larger screens */
+  }
+  .left-section, .right-section {
+    inline-size: 50%; /* Equal width for left and right sections */
+    padding: 40px;
+  }
+  .left-section h2 {
+    font-size: 24px; /* Increase heading size */
+  }
+  .right-section input, .right-section textarea {
+    font-size: 16px; /* Larger input font size */
+  }
+  .right-section button {
+    padding: 15px; /* Larger button padding */
+    font-size: 16px;
+  }
+}
+
+
+.profile-container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+    text-align: center; /* Center align the text */
+    margin: 20px 0; /* Add some spacing above and below the heading */
+}
+
+.profile-card {
+  background-color: #1c3a77d8;
+  border-radius: 15px;
+  inline-size: 250px;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card img {
+  inline-size: 100%;
+  border-radius: 10px;
+  margin-block-end: 20px;
+}
+
+.profile-card h2 {
+  font-size: 1.2em;
+  margin-block-end: 10px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card p {
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin-block-end: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkedin-icon {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #0077b5;
+  color: #ffffff;
+  border-radius: 50%;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.linkedin-icon:hover {
+  background-color: #005582;
+}
+
+/* Adds space between the Swiper gallery and the footer */
+.swiper-container {
+  margin-block-end: 40px; /* Adjust the value as needed for more or less space */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-inline-size: 100%;
+  margin-block-end: 20px; /* Adds space between each slide and the footer */
+}
+
+.swiper-slide img {
+  max-inline-size: 100%;
+  max-block-size: 300px;
+  object-fit: contain;
+  display: block;
+  margin: auto; /* Centers image within the slide */
+}
+h1 {
+  text-align: start; /* Center align the text */
+  margin: 20px 0; /* Add some spacing above and below the heading */
+}
+h4 {
+  text-align: center; /* Center align the text */
+  margin: 50px 0; /* Add some spacing above and below the heading */
+  font-size: 50px;
+}

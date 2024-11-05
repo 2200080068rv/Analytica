@@ -1,0 +1,529 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #ffffff;
+    background-image: url('../images/Background/RedBackground.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-block-start: 60px; /* Increased padding to account for navbar height */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for glassy effect */
+    backdrop-filter: blur(10px); /* Adds the glassy blur effect */
+    color: white;
+    padding: 5px 10px;
+    position: fixed;
+    inline-size: 100%;
+    inset-block-start: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a soft shadow for depth */
+}
+
+
+header .logo {
+    block-size: 50px; /* Set the height for the logo */
+}
+
+nav {
+    block-size: 50px; /* Keep the height of the navbar */
+    display: flex; /* Make the nav a flex container */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    inline-size: 100%; /* Ensure it spans the full width */
+}
+
+nav ul {
+    display: flex; /* Ensures the list items are in a row */
+    list-style: none; /* Removes bullet points */
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px; /* Centers nav items vertically */
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline */
+  }
+  
+ 
+  
+
+.checkbtn {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hidden by default; shown in mobile view */
+}
+
+#check {
+    display: none; /* Hidden checkbox for toggling */
+}
+
+/* Responsive Styles */
+@media (max-width: 1050px) {
+    label.logo {
+        padding-inline-start: 10px; /* Adjust padding for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Smaller font size on medium screens */
+    }
+}
+
+/* Responsive media query code for small screens */
+@media (max-width: 890px) {
+    .checkbtn {
+        display: block; /* Show hamburger icon */
+    }
+
+    nav ul {
+        position: fixed; /* Make the menu fixed on the screen */
+        inline-size: 100%;
+        block-size: 100vh;
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for glassy effect */
+        backdrop-filter: blur(10px); /* Adds the glassy blur effect */
+        inset-block-start: 50px; /* Position below the navbar */
+        inset-inline-start: -100%; /* Hide offscreen initially */
+        text-align: center;
+        transition: all 0.5s; /* Smooth transition */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a soft shadow for depth */
+    }
+
+    nav ul li {
+        display: block; /* Stack nav items vertically */
+        margin: 20px 0; /* Spacing between items */
+        line-height: 30px; /* Adjust line height */
+    }
+
+    nav ul li a {
+        font-size: 20px; /* Increase font size on mobile */
+        color: white; /* Ensure text is visible */
+    }
+
+    a:hover,
+    a.active {
+        background: none; /* No additional background on hover or active state */
+        color: white; /* Keep text color consistent */
+    }
+
+    #check:checked ~ ul {
+        inset-inline-start: 0; /* Slide in menu when checkbox is checked */
+    }
+}
+
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-text {
+    max-inline-size: 800px; /* Limit the width of the text section */
+    margin: 0 auto; /* Center the text section */
+}
+
+.hero-image {
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    margin-block-start: 20px; /* Space between the paragraph and image */
+}
+
+.hero-image img {
+    max-inline-size: 80%; /* Ensure the image scales to fit the container */
+    block-size: auto; /* Maintain aspect ratio */
+}
+
+.background-video {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    min-inline-size: 100%;
+    min-block-size: 100%;
+    inline-size: auto;
+    block-size: auto;
+    z-index: -1; /* Set the video behind other elements */
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    padding: 20px 0;
+    margin: 0 auto;
+    inline-size: 90%; /* Make the container responsive */
+    max-inline-size: 1140px; /* Set a max width for larger screens */
+}
+
+h1 {
+    position: relative;
+    margin-block-end: 45px;
+    font-family: "Oswald", sans-serif;
+    font-size: 44px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+.gallery-wrap {
+    display: flex; /* Use flexbox for the gallery layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the items */
+    margin: 40px 0; /* Space above and below the gallery */
+}
+
+.item {
+    position: relative; /* Set position to relative for the overlay */
+    flex: 1 1 200px; /* Grow to fill space but not smaller than 200px */
+    margin: 10px; /* Space between items */
+    block-size: 200px; /* Fixed height for the items */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; /* No repeat for backgrounds */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for scaling effect */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Scale the item up on hover */
+}
+
+/* Overlay effect */
+.item::after {
+    content: ""; /* Empty content for the overlay */
+    position: absolute; /* Position it absolutely */
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    opacity: 0; /* Start with no overlay */
+    transition: opacity 0   s ease; /* Smooth transition for overlay */
+}
+
+.item:hover::after {
+    opacity: 0; /* Show overlay on hover */
+}
+
+.item-1 {
+    background-image: url("../images/Faculty/hodsir.jpg");
+}
+.item-2 {
+    background-image: url("..//images/Faculty/lamplighting.jpg");
+}
+
+.item-3 {
+    background-image: url("..//images/Faculty/harikiransir.jpg");
+}
+
+.item-4 {
+    background-image: url("../images/Faculty/Sunithamam.png");
+}
+
+.item-5 {
+    background-image: url("../images/Faculty/swain\ sir.jpg");
+}
+.item-6 {
+    background-image: url("../images/Faculty/Swethamam.png");
+}
+.item-7 {
+    background-image: url("../images/Faculty/nithinsir.png");
+}
+
+.item-8 {
+    background-image: url("..//images/Faculty/1stanniversary.jpg");
+}
+
+.item-9 {
+    background-image: url("..//images/Faculty/Team1.png.jpg");
+}
+
+.item-10 {
+    background-image: url("../images/Faculty/Team.png.jpg");
+}
+
+.social {
+    position: absolute;
+    inset-inline-end: 35px;
+    inset-block-end: 0;
+}
+
+.social img {
+    display: block;
+    inline-size: 32px;
+}
+
+footer {
+    background-color: #111;
+}
+
+.footerContainer {
+    inline-size: 100%;
+    padding: 70px 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.footerLogo img {
+    block-size: 70px; /* Adjust logo size as needed */
+    inline-size: auto;
+}
+
+/* Align social icons and navigation to the right */
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 700px) {
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerContent {
+        align-items: center;
+    }
+    
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        inline-size: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    header {
+        padding: 10px 15px; /* Smaller padding for header */
+    }
+    .logo {
+        font-size: 18px; /* Adjust logo size */
+    }
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+    nav ul li {
+        margin-inline-start: 0; /* Reset margin for stacked items */
+        margin-block-end: 10px;
+    }
+    .contact-container {
+        margin-block-start: 20px; /* Adjust margin for contact container */
+    }
+    .left-section h2,
+    .right-section input,
+    .right-section textarea,
+    .right-section button {
+        font-size: 14px; /* Uniform smaller font size on mobile */
+    }
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row; /* Row layout on larger screens */
+    }
+    .left-section,
+    .right-section {
+        inline-size: 50%; /* Equal width for left and right sections */
+        padding: 40px;
+    }
+    .left-section h2 {
+        font-size: 24px; /* Increase heading size */
+    }
+    .right-section input,
+    .right-section textarea {
+        font-size: 16px; /* Larger input font size */
+    }
+    .right-section button {
+        padding: 15px; /* Larger button padding */
+        font-size: 16px;
+    }
+}
+/* Loader styles */
+/* Loader container */
+/* Loader styles */
+.loader-container {
+    position: fixed;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Rotating loader ring */
+.loader-ring {
+    position: relative;
+    inline-size: 48px;
+    block-size: 48px;
+    border: 5px solid #FFF;
+    border-block-end-color: #FF3D00;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+    box-sizing: border-box;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Moving text below loader */
+.moving-text-container {
+    margin-block-start: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.moving-text {
+    display: inline-block;
+    animation: scrollText 5s linear infinite;
+    font-size: 18px;
+    color: #fff;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Hide main content initially */
+.main-content {
+    display: none;
+}
+
+.video-container {
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    overflow: hidden; /* Ensure no overflow */
+    z-index: -1; /* Place behind other content */
+}
+
+#introVideo {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover; /* Cover the entire area */
+}
+
+.main-content {
+    position: relative; /* Position to ensure it's above the video */
+    z-index: 1; /* Place above the video */
+    display: none; /* Hide main content initially */
+}

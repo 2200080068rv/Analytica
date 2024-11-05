@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #ffffff;
+    background-image: url('../images/Background/RedBackground.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 60px; /* Increased padding to account for navbar height */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for glassy effect */
+    backdrop-filter: blur(10px); /* Adds the glassy blur effect */
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a soft shadow for depth */
+}
+
+
+header .logo {
+    height: 50px; /* Set the height for the logo */
+}
+
+nav {
+    height: 50px; /* Keep the height of the navbar */
+    display: flex; /* Make the nav a flex container */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+nav ul {
+    display: flex; /* Ensures the list items are in a row */
+    list-style: none; /* Removes bullet points */
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px; /* Centers nav items vertically */
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  
+  
+.checkbtn {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hidden by default; shown in mobile view */
+}
+
+#check {
+    display: none; /* Hidden checkbox for toggling */
+}
+
+/* Responsive Styles */
+@media (max-width: 1050px) {
+    label.logo {
+        padding-left: 10px; /* Adjust padding for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Smaller font size on medium screens */
+    }
+}
+
+/* Responsive media query code for small screens */
+@media (max-width: 890px) {
+    .checkbtn {
+        display: block; /* Show hamburger icon */
+    }
+
+    nav ul {
+        position: fixed; /* Make the menu fixed on the screen */
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for glassy effect */
+        backdrop-filter: blur(10px); /* Adds the glassy blur effect */
+        top: 50px; /* Position below the navbar */
+        left: -100%; /* Hide offscreen initially */
+        text-align: center;
+        transition: all 0.5s; /* Smooth transition */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a soft shadow for depth */
+    }
+
+    nav ul li {
+        display: block; /* Stack nav items vertically */
+        margin: 20px 0; /* Spacing between items */
+        line-height: 30px; /* Adjust line height */
+    }
+
+    nav ul li a {
+        font-size: 20px; /* Increase font size on mobile */
+        color: white; /* Ensure text is visible */
+    }
+
+    a:hover,
+    a.active {
+        background: none; /* No additional background on hover or active state */
+        color: white; /* Keep text color consistent */
+    }
+
+    #check:checked ~ ul {
+        left: 0; /* Slide in menu when checkbox is checked */
+    }
+}
+
+
+/* Additional styling for the hero section, event grid, and footer remains unchanged... */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Event Section */
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+/* Event grid container */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Card styling with border effect */
+.hover-card {
+    width: 300px;
+    height: 300px; /* Consider changing to height: auto; if needed */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    background-color: #333;
+}
+
+/* Border effect on hover */
+.hover-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 4px solid #fff; /* White border on hover */
+}
+
+/* Image styling within card */
+.hover-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+}
+
+/* Overlay styling for event details */
+.hover-card .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    border-radius: 8px;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Show overlay with event details on hover */
+.hover-card:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Title styling */
+.overlay h3 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+/* Description styling */
+.overlay p {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #111;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.footerLogo img {
+    height: 80px; /* Increase height to make the logo larger */
+    width: auto; /* Ensures the width scales proportionally */
+}
+
+
+/* Align social icons and navigation to the right */
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 700px) {
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerContent {
+        align-items: center;
+    }
+    
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    header {
+      padding: 10px 15px; /* Smaller padding for header */
+    }
+    .logo {
+      font-size: 18px; /* Adjust logo size */
+    }
+    nav ul {
+      flex-direction: column; /* Stack nav items vertically */
+      align-items: center;
+    }
+    nav ul li {
+      margin-left: 0; /* Reset margin for stacked items */
+      margin-bottom: 10px;
+    }
+    .contact-container {
+      margin-top: 20px; /* Adjust margin for contact container */
+    }
+    .left-section h2, .right-section input, .right-section textarea, .right-section button {
+      font-size: 14px; /* Uniform smaller font size on mobile */
+    }
+  }
+  /* Responsive Adjustments */
+@media (min-width: 768px) {
+    .contact-container {
+      flex-direction: row; /* Row layout on larger screens */
+    }
+    .left-section, .right-section {
+      width: 50%; /* Equal width for left and right sections */
+      padding: 40px;
+    }
+    .left-section h2 {
+      font-size: 24px; /* Increase heading size */
+    }
+    .right-section input, .right-section textarea {
+      font-size: 16px; /* Larger input font size */
+    }
+    .right-section button {
+      padding: 15px; /* Larger button padding */
+      font-size: 16px;
+    }
+  }

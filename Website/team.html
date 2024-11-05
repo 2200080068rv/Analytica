@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALYTICA - Our Team</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/css/team.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logos/Logo_updated_white_bg-removebg-preview.png">
+   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+<style>
+    /* Container for the tabs */
+    .tabs {
+    display: flex;
+    justify-content: center; /* Center-align the tabs */
+    align-items: center;
+    gap: 10px;
+    margin-block-end: 20px;
+    margin-block-start: 50px; /* Added to push the tabs downward */
+}
+
+    /* Style for each tab */
+    .tab {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Inactive tab style */
+    .tab.inactive {
+        background-color: black;
+        color: white;
+    }
+
+    /* Active tab style */
+    .tab.active {
+        background-color: #0088ff; /* Orange */
+        color: white;
+    }
+
+    /* Content container */
+    .content {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center; /* Center-align content */
+    }
+
+    /* Card Styles */
+    .card {
+        position: relative;
+        inline-size: 300px;
+        block-size: 360px;
+        perspective: 1000px;
+        cursor: pointer;
+        margin: 10px; /* Added margin for spacing */
+    }
+
+    .card-front,
+    .card-back {
+        position: absolute;
+        inline-size: 100%;
+        block-size: 100%;
+        backface-visibility: hidden;
+        transition: transform 0.6s;
+        padding: 20px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+    }
+
+    /* Hover effect */
+    .card:hover .card-front {
+        transform: rotateY(180deg);
+    }
+
+    .card:hover .card-back {
+        transform: rotateY(360deg);
+    }
+
+    h2 {
+        margin-block-end: 15px;
+        color: #ffffff;
+    }
+
+    h3 {
+        margin-block-end: 15px;
+        color: #000000;
+    }
+
+    p {
+        color: #666;
+        line-height: 1.5;
+    }
+
+    .profile-image {
+        inline-size: 100%;
+        block-size: auto;
+        border-radius: 10px;
+    }
+
+    .social-links {
+        margin-block-start: 20px;
+    }
+
+    .social-links a {
+        margin-inline-end: 10px;
+        text-decoration: none;
+        color: #007BFF;
+        font-size: 24px;
+    }
+
+    .social-links a:hover {
+        color: #0056b3;
+    }
+
+    /* Grid layout for cards */
+    .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    justify-items: center; /* Center cards horizontally */
+    margin-block-end: 50px; /* Added space between the card grid and footer */
+}
+
+    .square-image-legacy {
+    inline-size: 100%; /* Adjust as needed */
+    padding-block-start: 100%; /* Creates a 1:1 aspect ratio */
+    position: relative;
+    overflow: hidden;
+}
+.square-image-legacy img {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}
+</style>
+
+</head>
+<body>
+<header>
+    <img src="assets/images/logos/analytica_logo-removebg-preview.png" alt="Analytica Logo" class="logo" style="block-size: 50px;"> <!-- Adjust height as needed -->
+
+    <!-- Responsive Navbar -->
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="#"></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+
+      </ul>
+    </nav>
+    <!-- End of Navbar -->
+
+  </header>
+      
+   <section>
+    <div class="tabs">
+        <div class="tab active" onclick="showContent('content1')">Y22</div>
+        <div class="tab inactive" onclick="showContent('content2')">Y21</div>
+    </div>
+
+    <!-- Content Sections -->
+    <div id="content1" class="content">
+        <h1>Y22 Core Team</h1>
+
+        <div class="card-grid">
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/Rama Rao.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Vanimireddy Rama Rao</h3>
+                    <p>President</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        He oversees the operations of the clubs, promotes a culture of success, manages finance, 
+                        reports progress, deals with issues, and ensures that his advice is in line with club objectives.
+                        
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/RamNaidu03" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/_ram_naidu_03" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/rama-rao-vanimireddy-22665125a/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/Ramya.jpeg" alt="Square Image">
+                    </div>                    
+                    <h3>Venigalla Ramya Sree</h3>
+                    <p>Vice-President</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        Vice presidents assist the club function, help plan events, 
+                        allocate resources, encourage participation, and be a secondary contact for member issues.
+                        Vice presidents also promote a positive culture by supporting the president
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/Ramyasree07" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/ramyasree_venigalla" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="http://linkedin.com/in/ramya-sree-venigalla-4002a328b" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/HARSHITHA.png" alt="Square Image">
+                    </div>                    
+                    <h3>Chakka Harshitha</h3>
+                    <p>Director of Technology</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        She oversees the club's technical aspects, manages the technical team, develops projects, 
+                        plans sessions, selects tech stacks, and stays updated on the latest web development trends.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/harshithachakka" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/harshic3212" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/harshitha-chakka-23301128b/recent-activity/all/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/likitha.jpeg" alt="Square Image">
+                    </div>                    
+                    <h3>Dakkili Likitha</h3>
+                    <p>Director of Planning</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Director of Planning organizes the club's schedule and tasks while prioritizing both 
+                        long-term and short-term objectives. They are also responsible for securing necessary permissions 
+                        for planned events.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/Likithadakkili" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/_likitha_dakkili_" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/likitha-dakkili-a81434255/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/waseem.JPG" alt="Square Image">
+                    </div>                    
+                    <h3>Shaik Waseem</h3>
+                    <p>Director Of Designing</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Director of Designing describes the main processes of the club in a coherent stream. 
+                        They ensure that aspects of design stand in line with the goals of the club and work towards 
+                        easy management.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/Waseem_266" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/shaikwaseem_786" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/waseem-shaik-7694a9287/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/omkar.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Gade Omkar Reddy </h3>
+                    <p>Director of Internal Relation</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The director of internal relations coordinates collaboration with other clubs, 
+                        manages announcements, organizes recognition events and collects feedback that 
+                        would help enhance activities and member experiences.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/GadeOmkar" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/omkar_reddy_gade" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/omkar-reddy-09b15626a/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/ruthik.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Meduri Ruthik Sravanth</h3>
+                    <p>Director of External Relation</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Director of External Relations is in charge of managing stakeholder relations, 
+                        creating industry professional relations, organizing guest speakers and making social activities go smoothly.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/Ruthik_66" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/meduri._.ruthik" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="www.linkedin.com/in/meduri-ruthik-sravanth-a8970a254" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/manikanta.PNG" alt="Square Image">
+                    </div>                    
+                    <h3> Daggupati Manikanta</h3>
+                    <p>Technical Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Technical Chair oversees technical aspects, initiates projects, 
+                        explores topics, conducts sessions, researches, and communicates via 
+                        Telegram and email to support members.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/MANIKANTA_DAGGUPATI" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/mani.daggupati" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAEXlDHYBibVgee7LssLgzURg8IaZVR3Ul7k&keywords=manikanta%20daggupati&origin=RICH_QUERY_SUGGESTION&position=0&searchId=5a7e8f9f-d4d3-4a11-9590-29f11f2e230b&sid=37i&spellCorrectionEnabled=false" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/MANASA.jpg" alt="Square Image">
+                    </div>                   
+                     <h3>Karyampudi Manasa </h3>
+                    <p>Technical Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Technical Chair oversees technical aspects, initiates projects, 
+                        explores topics, conducts sessions, researches, and communicates via 
+                        Telegram and email to support members.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/chicha_shinchan" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/manasa5/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/Sravya.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Panem Sravya</h3>
+                    <p>Technical Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Technical Chair oversees technical aspects, initiates projects, 
+                        explores topics, conducts sessions, researches, and communicates via 
+                        Telegram and email to support members.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/sravyareddy05" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/sravyareddy_01" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/panem-sravya-96b85628a/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/PALLAVI.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Morla Pallavi </h3>
+                    <p>Project Development Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        Coordinates club project planning, execution, and finalization. 
+                        She uses management tools to assign tasks and collaborate. She tracks milestones, troubleshoots problems, 
+                        and delivers at least two projects.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/pallavimorla" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/pallavimorla" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/morla-pallavi-345652249/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/Pavani.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Sreeram Pavani </h3>
+                    <p>Research Development Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Web Development Research Chair guides members on web projects, offering 
+                        feedback and troubleshooting. They promote initiatives on LinkedIn and coordinate 
+                        with the club's in-charge for updates.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/SreeramPavani" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/_pavani_sreeram" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/pavani-sreeram-003295254/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/Radhika.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Raya Radhika Krishna</h3>
+                    <p>Marketing Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Marketing Chair promotes the club to students and visitors through postings and advertisements, 
+                        manages social media platforms, and communicates the club's mission and values to boost engagement.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/Radhika0513" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/r__radhika__13" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/radhika-raya-4690a2288/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y22/Akshitha.jpeg" alt="Square Image">
+                    </div>                    
+                    <h3>A. Sai Akshitha </h3>
+                    <p>Professional Development</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Professional Development Chair fosters open communication and collaboration, 
+                        monitors members' progress, manages records of achievements, and oversees professionalism 
+                        while handling GitHub.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/Akshitha0506" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/akshitha_anumalasetty" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sai-akshitha-anumalasetty-81029125b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content2" class="content" style="display: none;">
+        <h1>Y21 Core Team</h1>
+        <div class="card-grid">
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/Ganesh Oruganti.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Ganesh Oruganti</h3>
+                    <p>President</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        He oversees the operations of the clubs, promotes a culture of success, manages finance,
+                        reports progress, deals with issues, and ensures that his advice is in line with club objectives.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/GaaneshOruganti" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/ganesh_oruganti_" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ganesh-oruganti" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/charan.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Nayana Charan</h3>
+                    <p>Vice-President</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        Vice presidents assist the club function, help plan events, 
+                        allocate resources, encourage participation, and be a secondary 
+                        contact for member issues.Vice presidents also promote a positive culture by supporting the president
+
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/Charanhere04" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/_.charan._04" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/sathvik.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Gude Sathvik</h3>
+                    <p>Director of Technology</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>He oversees the club's technical aspects, manages the technical team, 
+                    develops projects, plans sessions, selects tech stacks, 
+                    and stays updated on the latest web development trends.
+                    <div class="social-links">
+                        <a href="https://t.me/sathvik_gude" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/sathvik_gude" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sathvik-gude-894a61239/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/ram.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>S.Ram</h3>
+                    <p>Dir Of Designing & Planning</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Director of Designing and Planning oversees the club schedule, 
+                        defines goals, puts forward important procedures in flow, 
+                        and arranges necessary permits for the event..
+                    </p>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://www.instagram.com/urstrulyram.in?igsh=MzRlODBiNWFlZA==" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/Harshini.jpg" alt="Square Image">
+                    </div>                   
+                     <h3>Yalla Ramya Sri Harshini</h3>
+                    <p>Director of Internal Relations</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The director of internal relations coordinates collaboration with other clubs, 
+                        manages announcements, organizes recognition events and collects feedback that 
+                        would help enhance activities and member experiences.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://www.instagram.com/harshi._.04?igsh=MzRlODBiNWFlZA==" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ramya-sri-harshini-yalla/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/Srikanth.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Thummalapudi Srikanth</h3>
+                    <p>Director Of External Relations</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Director of External Relations is in charge of managing stakeholder relations, 
+                        creating industry professional relations, organizing guest speakers and making social activities go smoothly.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/srikanth2505" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/srikanth__25" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/srikanth-thummalapudi-60b980225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/priya.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Sammeta Yesu Priya</h3>
+                    <p>Technical Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Technical Chair oversees technical aspects, initiates projects, explores topics, 
+                        conducts sessions, researches, and communicates via Telegram and email to support members.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/__priyaaaa07__" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sammeta-yesupriya/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/Gnapika.jpeg" alt="Square Image">
+                    </div>                    
+                    <h3>Dhanala Gnapika</h3>
+                    <p>Technical Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Technical Chair oversees technical aspects, initiates projects, explores topics, 
+                        conducts sessions, researches, and communicates via Telegram and email to support members.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/gnapika_chowdary_" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/dhanala-gnapika-885200246/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/vikas.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Vikas Nakka</h3>
+                    <p>Technical Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Technical Chair oversees technical aspects, initiates projects, explores topics, 
+                        conducts sessions, researches, and communicates via Telegram and email to support members.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/vikasrcb" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/vikky_.18" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/vikas-nakka-b41aab24b/?originalSubdomain=in" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/Advaith.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Nandibhatla Advaith</h3>
+                    <p>Technical Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Technical Chair oversees technical aspects, initiates projects, explores topics, 
+                        conducts sessions, researches, and communicates via Telegram and email to support members.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/2100080149_Nandibhatla Advaith" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://www.instagram.com/advaitham_na?igsh=MzRlODBiNWFlZA==" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/advaith-nandibhatla/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/Charishma.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Nallamilli Charishma</h3>
+                    <p>Technical Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Technical Chair oversees technical aspects, initiates projects, explores topics, 
+                        conducts sessions, researches, and communicates via Telegram and email to support members.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/Charishma_Nallamilli" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/charishma___nallamilli" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/nallamilli-charishma-b504a5255/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/Mohammad Althaf.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Mohammad Althaf</h3>
+                    <p>Research & Project Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Web Development Research Chair ensures project success, 
+                        assists members with proposals, provides feedback, promotes 
+                        initiatives on LinkedIn, and maintains contact for continuous improvements.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/Althaf_2100080156" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/__a_l_t_h_a_f______" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/althaf-mohammad-291520227/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="../Website/assets/images/Students/Y21/Rajesh.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>Chaladandi Rajesh</h3>
+                    <p>Research & Project Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Web Development Research Chair ensures project success, 
+                        assists members with proposals, provides feedback, promotes 
+                        initiatives on LinkedIn, and maintains contact for continuous improvements.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/rajesh5354" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://www.instagram.com/_.rajesh.6?igsh=MzRlODBiNWFlZA==" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/rajesh-chaladandi/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/thanmayi.jpg" alt="Square Image">
+                    </div>                    
+                    <h3>M.Tanmayi chowdary</h3>
+                    <p>Marketing Chair</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Marketing Chair promotes the club to students and visitors through postings and advertisements,
+                        manages social media platforms, and communicates the club's mission and values to boost engagement.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/tanmayi_chowdary" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/tanmayi-malakalapalli-514347286/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Front side of card -->
+                <div class="card-front">
+                    <div class="square-image-legacy">
+                        <img src="assets/images/Students/Y21/Harshita Bandi.jpeg" alt="Square Image">
+                    </div>                    
+                    <h3>Bandi Harshita </h3>
+                    <p>Professional Development</p>
+                </div>
+
+                <!-- Back side of card (shows on hover) -->
+                <div class="card-back">
+                    <h3>About me:</h3>
+                    <p>
+                        The Professional Development Chair fosters open communication and collaboration, 
+                        monitors members' progress, manages records of achievements, and oversees professionalism 
+                        while handling GitHub.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://www.instagram.com/harshitabandi03?igsh=MzRlODBiNWFlZA==" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/harshita-bandi-30a03b230" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showContent(contentId) {
+            // Get all tabs and contents
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.content');
+
+            // Loop through tabs to set active/inactive
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                tab.classList.add('inactive');
+            });
+
+            // Activate the clicked tab
+            document.querySelector(`[onclick="showContent('${contentId}')"]`).classList.add('active');
+            document.querySelector(`[onclick="showContent('${contentId}')"]`).classList.remove('inactive');
+
+            // Hide all content and show the clicked tab's content
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+  <footer>
+    <div class="footerContainer">
+        <!-- Logo on the left -->
+        <div class="footerLogo">
+            <img src="assets/images/logos/analytica_logo-removebg-preview.png" alt="Team Analytica Logo"> <!-- Replace 'logo.png' with your actual logo path -->
+        </div>
+        <!-- Social Icons and Navigation Links on the right -->
+        <div class="footerContent">
+            <div class="socialIcons">
+                <a href="https://www.instagram.com/analytica_klef?igsh=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me/Analytica_Club"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.linkedin.com/company/analyticaclub/"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footerBottom">
+        <p>&copy; 2024 Team Analytica. All rights reserved.</p>
+    </div>
+  </footer>
+      </section>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/11/02/12/20241102125227-3PN8NYXS.js"></script>
+
+</body>
+</html>

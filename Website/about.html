@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALYTICA - About Us</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logos/Logo_updated_white_bg-removebg-preview.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css"> <!-- Add this for the profile cards -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> <!-- Swiper CSS -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.getElementById('hamburger');
+            const popupMenu = document.getElementById('popup-menu');
+            const closeBtn = document.getElementById('close-popup');
+
+            hamburger.addEventListener('click', () => {
+                popupMenu.classList.toggle('show'); // Toggle visibility of popup menu
+            });
+
+            closeBtn.addEventListener('click', () => {
+                popupMenu.classList.remove('show'); // Hide the popup menu when close button is clicked
+            });
+
+            // Optional: Close the menu when a link is clicked
+            popupMenu.addEventListener('click', (event) => {
+                if (event.target.tagName === 'A') {
+                    popupMenu.classList.remove('show'); // Hide the menu when a link is clicked
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="assets/images/logos/analytica_logo-removebg-preview.png" alt="Analytica Logo" class="logo" style="block-size: 50px;"> <!-- Adjust height as needed -->
+    
+        <!-- Responsive Navbar -->
+        <nav>
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+            <li><a class="active" href="#"></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <!-- End of Navbar -->
+    </header>
+    
+    <div class="container">
+        <div class="text">
+            <h1>About Us</h1>
+            <p>The Analytica is the prestigious club of K L University and focuses solely on working with the students on collaborative projects based on interest in data science and analytics. Our club gives a platform for students to do a project based on hands-on activity with different workshops that develop and refine skills so very pertinent to this new, data-driven world of today.
+
+                Whether a fresh data lover or an experienced member, Analytica has all hands on deck to help and support you in the way possible. This is where we hold various hackathons, guest lectures, and team projects that further allow members to gain on-the-field practical experience and garner newer tools and networking prospects in the field.</p>
+        </div>
+        <div class="image-container">
+            <img src="assets/images/3d-cartoon-portrait-person-practicing-law-profession.png" alt="Character" class="image">
+            <div class="character">
+                <!-- Add your character animation here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Cards Section -->
+    <h2>Faculty Coordinators</h2> 
+    <div class="profile-container">
+        <div class="profile-card">
+            <img src="assets/images/Faculty/hodsir.jpg" alt="Dr. B.Tiripathi Reddy">
+            <h2>Dr. B.Tiripathi Reddy</h2>
+            <p>HOD<br>Dept. AI & DS</p>
+        </div>
+        <div class="profile-card">
+            <img src="assets/images/Faculty/praveen sir.jpg" alt="Dr. P.Praveen Kumar">
+            <h2>Dr. P.Praveen Kumar</h2>
+            <p>Alternate HOD<br>Dept. AI & DS</p>
+        </div>
+        <div class="profile-card">
+            <img src="assets/images/Faculty/rajesh sir.jpg" alt="Dr. N.Rajesh">
+            <h2>Dr. N.Rajesh</h2>
+            <p>Deputy HOD<br>Dept. AI & DS</p>
+        </div>
+        <div class="profile-card">
+            <img src="assets/images/Faculty/swethamam1.jpg" alt="Ms. P.Swetha">
+            <h2>Ms. P.Swetha</h2>
+            <p>Club Incharge<br>Assistant Professor</p>
+        </div>
+        <div class="profile-card">
+            <img src="assets/images/Faculty/nithinsir1.jpg" alt="Mr. V.Joe Nithin">
+            <h2>Mr. V.Joe Nithin</h2>
+            <p>Club Advisor<br>Assistant Professor</p>
+        </div>
+    </div>
+
+    <!-- Swiper Gallery Section -->
+    <h4>Gallery</h4>
+    <div class="swiper-container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/images/Faculty/hodsir.jpg" alt="HOD Sir"></div>
+                <div class="swiper-slide"><img src="assets/images/Faculty/swain speech.jpg" alt="Swain Speech"></div>
+                <div class="swiper-slide"><img src="assets/images/Faculty/faculty.png.JPG" alt="Faculty Group"></div>
+                <div class="swiper-slide"><img src="assets/images/Faculty/speech.JPG" alt="Faculty Speech"></div>
+                <div class="swiper-slide"><img src="assets/images/Students/About/ramya.jpg" alt="Althaf"></div>
+                <div class="swiper-slide"><img src="assets/images/Students/About/althaf.jpg" alt="Ramya"></div>
+                <div class="swiper-slide"><img src="assets/images/Students/About/ashraf.jpg" alt="Ashraf"></div>
+            </div>
+            <!-- Swiper Controls -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <!-- Logo on the left -->
+            <div class="footerLogo">
+                <img src="assets/images/logos/analytica_logo-removebg-preview.png" alt="Team Analytica Logo">
+            </div>
+            <!-- Social Icons and Navigation Links on the right -->
+            <div class="footerContent">
+                <div class="socialIcons">
+                    <a href="https://www.instagram.com/analytica_klef?igsh=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://t.me/Analytica_Club"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://www.linkedin.com/company/analyticaclub/"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <div class="footerNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; 2024 Team Analytica. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper for the gallery
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/11/02/12/20241102125227-3PN8NYXS.js"></script>
+</body>
+</html>

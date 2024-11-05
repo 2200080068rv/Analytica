@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALYTICA - Home</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logos/Logo_updated_white_bg-removebg-preview.png">
+<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+
+<!-- Fullscreen Video Container -->
+<div class="video-container" id="videoContainer">
+    <video id="introVideo" muted playsinline autoplay>
+        <source src="assets/video/video loader.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+
+<!-- Main Content -->
+<div class="main-content">
+    <header>
+        <img src="assets/images/logos/analytica_logo-removebg-preview.png" alt="Analytica Logo" class="logo" style="block-size: 50px;">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a class="active" href="#"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop class="background-video">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Welcome To Analytica Club!</h1>
+                <p>We will empower the students of K L University to explore data science and analytics through hands-on projects, workshops, and networking opportunities. Let's innovate together!</p>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/beb257fb-80fd-4aed-b7ed-a9f2a5204591.png" alt="Analytica Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <div class="container">
+        <h1>Gallery</h1>
+        <div class="gallery-wrap">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
+            <div class="item item-6"></div>
+            <div class="item item-7"></div>
+            <div class="item item-8"></div>
+            <div class="item item-9"></div>
+            <div class="item item-10"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="footerLogo">
+                <img src="assets/images/logos/analytica_logo-removebg-preview.png" alt="Team Analytica Logo">
+            </div>
+            <div class="footerContent">
+                <div class="socialIcons">
+                    <a href="https://www.instagram.com/analytica_klef?igsh=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://t.me/Analytica_Club"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://www.linkedin.com/company/analyticaclub/"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <div class="footerNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; 2024 Team Analytica. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/11/02/12/20241102125227-3PN8NYXS.js"></script>
+    
+    <!-- Video Playback Control Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('introVideo');
+            const videoPlayed = sessionStorage.getItem('videoPlayed');
+
+            if (videoPlayed !== 'true') {
+                // Video hasn't been played yet
+                video.play();
+
+                // Set the flag in sessionStorage to mark the video as played
+                sessionStorage.setItem('videoPlayed', 'true');
+
+                // Hide video and show main content when video ends
+                video.onended = function() {
+                    document.querySelector('.video-container').style.display = 'none'; 
+                    document.querySelector('.main-content').style.display = 'block';
+                };
+            } else {
+                // Video has already been played, so just show main content
+                document.querySelector('.video-container').style.display = 'none'; 
+                document.querySelector('.main-content').style.display = 'block';
+            }
+        });
+    </script>
+</div>
+
+</body>
+</html>
