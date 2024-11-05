@@ -452,3 +452,138 @@ p {
         font-size: 16px;
     }
 }
+/* Container for the tabs */
+.tabs {
+display: flex;
+justify-content: center; /* Center-align the tabs */
+align-items: center;
+gap: 10px;
+margin-block-end: 20px;
+margin-block-start: 50px; /* Added to push the tabs downward */
+}
+
+/* Style for each tab */
+.tab {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Inactive tab style */
+.tab.inactive {
+    background-color: black;
+    color: white;
+}
+
+/* Active tab style */
+.tab.active {
+    background-color: #0088ff; /* Orange */
+    color: white;
+}
+
+/* Content container */
+.content {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Center-align content */
+}
+
+/* Card Styles */
+.card {
+    position: relative;
+    inline-size: 300px;
+    block-size: 360px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 10px; /* Added margin for spacing */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+/* Hover effect */
+.card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(360deg);
+}
+
+h2 {
+    margin-block-end: 15px;
+    color: #ffffff;
+}
+
+h3 {
+    margin-block-end: 15px;
+    color: #000000;
+}
+
+p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.profile-image {
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: 10px;
+}
+
+.social-links {
+    margin-block-start: 20px;
+}
+
+.social-links a {
+    margin-inline-end: 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 24px;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+/* Grid layout for cards */
+.card-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+gap: 20px; /* Space between cards */
+justify-items: center; /* Center cards horizontally */
+margin-block-end: 50px; /* Added space between the card grid and footer */
+}
+
+.square-image-legacy {
+inline-size: 100%; /* Adjust as needed */
+padding-block-start: 100%; /* Creates a 1:1 aspect ratio */
+position: relative;
+overflow: hidden;
+}
+.square-image-legacy img {
+position: absolute;
+inset-block-start: 0;
+inset-inline-start: 0;
+inline-size: 100%;
+block-size: 100%;
+object-fit: cover;
+}
