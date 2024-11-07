@@ -475,51 +475,50 @@ footer {
   }
 }
 
-
+/* Profile Container */
 .profile-container {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust spacing between cards */
   padding: 20px;
   justify-content: center;
   align-items: center;
 }
-h2 {
-    text-align: center; /* Center align the text */
-    margin: 20px 0; /* Add some spacing above and below the heading */
-}
 
+/* Profile Card Styling */
 .profile-card {
-  background-color: #1c3a77d8;
+  background-color: rgba(28, 58, 119, 0.85); /* Add transparency */
   border-radius: 15px;
-  inline-size: 250px;
+  max-inline-size: 250px; /* Set max width for cards */
   padding: 20px;
   text-align: center;
   color: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  flex: 1 1 100%; /* Default to full width on smaller screens */
 }
 
+/* Profile Card Image */
 .profile-card img {
   inline-size: 100%;
   border-radius: 10px;
-  margin-block-end: 20px;
+  margin-block-end: 15px;
 }
 
+/* Headings inside Profile Card */
 .profile-card h2 {
   font-size: 1.2em;
   margin-block-end: 10px;
   font-weight: 600;
-  justify-content: center;
-  align-items: center;
 }
 
+/* Profile Card Description */
 .profile-card p {
   font-size: 0.9em;
   line-height: 1.6;
   margin-block-end: 15px;
-  justify-content: center;
-  align-items: center;
 }
 
+/* LinkedIn Icon */
 .linkedin-icon {
   display: inline-block;
   padding: 8px 12px;
@@ -534,6 +533,36 @@ h2 {
 .linkedin-icon:hover {
   background-color: #005582;
 }
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .profile-container {
+    flex-direction: row; /* Side-by-side on larger screens */
+  }
+
+  .profile-card {
+    flex: 1 1 calc(33.33% - 40px); /* Three cards per row, adjust as needed */
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column; /* Stack vertically on small screens */
+  }
+
+  .profile-card {
+    max-inline-size: 90%; /* Full width with some padding on mobile */
+    margin: 10px auto; /* Center cards */
+  }
+}
+
+h2 {
+    text-align: center; /* Center align the text */
+    margin: 20px 0; /* Add some spacing above and below the heading */
+}
+
+
+
 
 /* Adds space between the Swiper gallery and the footer */
 .swiper-container {
